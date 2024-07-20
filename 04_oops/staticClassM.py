@@ -19,6 +19,23 @@ class Student:
     def welcome(self):
         print("Welcome to CGC", self.name)
 
-s1=Student("komal",87)     
-s1.welcome()
+# s1=Student("komal",87)     
+# s1.welcome()
+
+##  Class Method  = bounds
+
+    @classmethod
+    def changeName(cls,name):
+        cls.name = name
+
+p1= Student()
+p1.changeName("Rahul")
+print(Student.name)
+
+
+
+#stitc methods= doesn't  access class or instance methods
+#class methods= cls attribute
+#instance attribute = self sttribute
+
         
