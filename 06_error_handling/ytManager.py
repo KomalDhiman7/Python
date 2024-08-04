@@ -1,5 +1,4 @@
 import json
-import os
 
 def load_data():
     try:
@@ -7,16 +6,10 @@ def load_data():
             return json.load(file)
     except FileNotFoundError:
         return []
-    except json.JSONDecodeError:
-        print("Error decoding JSON from the file.")
-        return []
 
 def save_data_helper(videos):
-    try:
-        with open('youtube.txt', 'w') as file:
-            json.dump(videos, file)
-    except IOError as e:
-        print(f"An error occurred while trying to write to the file: {e}")
+    with open('youtube.txt', 'w') as file:
+        json.dump(videos, file)
 
 def list_all_videos(videos):
     for index, video in enumerate(videos, start=1):
