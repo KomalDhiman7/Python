@@ -17,27 +17,27 @@ class DLL:
             self.start.prev = n
         self.start= n
     
-    # def insert_at_last(self, data):
-    #     temp =n
-    #     if self.start is not None:
-    #         while temp.next is None:
-    #             temp.next = None
-    #         n=Node(temp,data,None)
-    #         if temp.next==None:
-    #             self.start=n
-    #         else:
-    #             temp.next=n
+    def insert_at_last(self, data):
+        temp =n
+        if self.start is not None:
+            while temp.next is None:
+                temp.next = None
+            n=Node(temp,data,None)
+            if temp.next==None:
+                self.start=n
+            else:
+                temp.next=n
 
     def insert_at_last(self, data):
-    new_node = Node(None, data, None)
-    if self.start is None:
-        self.start = new_node
-    else:
-        temp = self.start
-        while temp.next is not None:
-            temp = temp.next
-        temp.next = new_node
-        new_node.prev = temp
+        new_node = Node(None, data, None)
+        if self.start is None:
+            self.start = new_node
+        else:
+            temp = self.start
+            while temp.next is not None:
+                temp = temp.next
+            temp.next = new_node
+            new_node.prev = temp
 
 
     def search(self,data):
@@ -69,7 +69,5 @@ class DLL:
 
     def delete_part_item(self,data):
         temp= self.start
-        if temp.item== data:
+        
             
-n=Node(1)
-print_all()
